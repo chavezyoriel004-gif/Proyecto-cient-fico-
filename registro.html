@@ -29,10 +29,18 @@ a{color:#2f6f8f}li{margin:6px 0}
 </ol>
 <div class="nota">Se guarda solo el texto de la pregunta y un fragmento de la respuesta dada (o «SIN RESPUESTA» cuando no se encontró una). No se guarda nombre, correo ni ningún otro dato de quien pregunta. Las que dicen «SIN RESPUESTA» te indican qué respuestas agregar a <code>conocimiento.html</code>.</div>
 
+<h2>Visitas y libro de visitas</h2>
+<p>Cuando el registro está activo, la hoja también recibe:</p>
+<ul>
+<li><b>[VISITA]</b>: una fila anónima por cada persona que abre la página (una vez por sesión). Sirve para contar cuántas visitas hubo.</li>
+<li><b>[VISITA] Nombre: …</b>: solo cuando alguien escribe voluntariamente su nombre en el «Libro de visitas» de la página.</li>
+</ul>
+<div class="nota">Nadie es identificado sin que lo decida: el nombre es opcional y lo escribe la propia persona. No se guarda dirección IP, ubicación ni otros datos. Para contar visitas en la hoja, filtra la columna «Pregunta» por «[VISITA]».</div>
+
 <h2>Datos de configuración</h2>
 <p>Edita este bloque en un editor de texto y completa los valores entre comillas:</p>
-<div id="registro" data-url="" data-pregunta="" data-respuesta="" style="display:none"></div>
-<p><code>data-url=""</code><br><code>data-pregunta=""</code><br><code>data-respuesta=""</code></p>
+<div id="registro" data-url="https://docs.google.com/forms/d/e/1FAIpQLSfKPOFMbKzoEX7FLl3CJbjJenQhoeX3EVMfnDPeIpg6l-7IRw/formResponse" data-pregunta="entry.99754568" data-respuesta="entry.1498259567" style="display:none"></div>
+<p><b>Ya está configurado</b> con tu formulario de Google: <code>entry.99754568</code> = Pregunta y <code>entry.1498259567</code> = Respuesta dada. Si cambias el formulario, hay que actualizar estos datos.</p>
 </main>
 </body>
 </html>
