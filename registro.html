@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Registro de preguntas · Microbiota cutánea</title>
+<style>
+body{margin:0;background:#f6f9fb;color:#1d2f3d;font:16px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+main{max-width:760px;margin:0 auto;padding:32px 20px 64px}
+h1{font-size:26px;margin:0 0 8px}h2{font-size:18px;margin:28px 0 6px}
+code{background:#fff;border:1px solid #dde7ee;border-radius:6px;padding:1px 6px;font-size:13px;word-break:break-all}
+.nota{background:#eaf2f7;border-radius:12px;padding:14px 16px;color:#44596a;font-size:14px;margin:16px 0}
+a{color:#2f6f8f}li{margin:6px 0}
+</style>
+</head>
+<body>
+<main>
+<p><a href="index.html">← Volver a la página del proyecto</a></p>
+<h1>Registro de preguntas</h1>
+<p>Este archivo le dice a la página dónde guardar las preguntas que escriben los visitantes. Mientras esté sin completar, la página <b>no registra nada</b>.</p>
+
+<h2>Cómo configurarlo (Google Forms + Hojas de cálculo)</h2>
+<ol>
+<li>Entra a <b>forms.google.com</b> con tu cuenta de Google y crea un formulario en blanco.</li>
+<li>Agrega dos preguntas de tipo <b>Respuesta corta</b>: «Pregunta» y «Respuesta dada». En Ajustes, desactiva pedir inicio de sesión o recopilar correos.</li>
+<li>Menú ⋮ → <b>Obtener enlace prellenado</b>. Escribe una «x» en cada pregunta → <b>Obtener enlace</b> → cópialo. Se verá así: <code>https://docs.google.com/forms/d/e/XXXX/viewform?usp=pp_url&amp;entry.111=x&amp;entry.222=x</code></li>
+<li>Abajo, completa los tres datos: en <code>data-url</code> pon el enlace cambiando <code>viewform?…</code> por <code>formResponse</code>; en <code>data-pregunta</code> el primer <code>entry.…</code>; en <code>data-respuesta</code> el segundo.</li>
+<li>En Forms, pestaña <b>Respuestas</b> → ícono verde de Hojas de cálculo → <b>Vincular</b>. Ahí verás las preguntas llegar. Para Excel: Archivo → Descargar → Microsoft Excel (.xlsx).</li>
+</ol>
+<div class="nota">Se guarda solo el texto de la pregunta y un fragmento de la respuesta dada (o «SIN RESPUESTA» cuando no se encontró una). No se guarda nombre, correo ni ningún otro dato de quien pregunta. Las que dicen «SIN RESPUESTA» te indican qué respuestas agregar a <code>conocimiento.html</code>.</div>
+
+<h2>Datos de configuración</h2>
+<p>Edita este bloque en un editor de texto y completa los valores entre comillas:</p>
+<div id="registro" data-url="" data-pregunta="" data-respuesta="" style="display:none"></div>
+<p><code>data-url=""</code><br><code>data-pregunta=""</code><br><code>data-respuesta=""</code></p>
+</main>
+</body>
+</html>
